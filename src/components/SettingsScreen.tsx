@@ -164,14 +164,14 @@ function SettingsScreen({
           style={styles.renewBox}
           onPress={openRenewSubscription}
           activeOpacity={0.85}
-          accessibilityLabel="Renew your subscription"
+          accessibilityLabel="Privami Website"
         >
-          <Text style={styles.renewText}>Renew your subscription</Text>
+          <Text style={styles.renewText}>Privami Website</Text>
           <Text style={styles.renewIcon}>↗️</Text>
         </TouchableOpacity>
       </ScrollView>
 
-      <Text style={styles.versionFooter}>Version 1.0.2</Text>
+      <Text style={styles.versionFooter}>Version 1.0.3</Text>
     </View>
   );
 }
@@ -184,17 +184,15 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "space-between",
-    paddingHorizontal: 8,
     paddingVertical: 12,
     borderBottomWidth: StyleSheet.hairlineWidth,
     borderBottomColor: COLORS.border,
   },
   backButton: {
-    minWidth: 88,
-    paddingHorizontal: 8,
-    paddingVertical: 8,
-    alignSelf: "center",
+    width: 88,
+    paddingLeft: 16,
+    paddingVertical: 12,
+    justifyContent: "center",
   },
   backButtonText: {
     color: COLORS.accent,
@@ -202,18 +200,15 @@ const styles = StyleSheet.create({
     fontWeight: "600",
   },
   headerTitle: {
-    position: "absolute",
-    left: 0,
-    right: 0,
+    flex: 1,
     textAlign: "center",
     color: "#FFFFFF",
     fontSize: 17,
     fontWeight: "600",
     letterSpacing: 0.2,
-    pointerEvents: "none",
   },
   headerSpacer: {
-    minWidth: 88,
+    width: 88,
   },
   scroll: {
     flex: 1,
