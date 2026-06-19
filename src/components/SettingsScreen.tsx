@@ -12,7 +12,7 @@ import {
 
 import { COLORS } from "../theme/amoled";
 
-const RENEW_SUBSCRIPTION_URL = "https://google.com";
+const RENEW_SUBSCRIPTION_URL = "https://privami.com/privamiai";
 
 type SettingsScreenProps = {
   onBack: () => void;
