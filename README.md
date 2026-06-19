@@ -1,97 +1,150 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+<div align="center">
 
-# Getting Started
+# 🔒 Privami AI
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+**Local, private, and fully configurable AI in your pocket.**
 
-## Step 1: Start Metro
+[![React Native](https://img.shields.io/badge/React%20Native-0.74-61DAFB?style=flat-square&logo=react)](https://reactnative.dev/)
+[![Android](https://img.shields.io/badge/Android-Supported-3DDC84?style=flat-square&logo=android)](https://developer.android.com/)
+[![iOS](https://img.shields.io/badge/iOS-Coming%20Soon-000000?style=flat-square&logo=apple)](https://developer.apple.com/)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![Based on EdgeLLM](https://img.shields.io/badge/Fork%20of-EdgeLLM-orange?style=flat-square)](https://github.com/MekkCyber/EdgeLLM)
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+</div>
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+---
 
-```sh
-# Using npm
+## 📖 About
+
+**Privami AI** is an AI assistant that runs **100% locally on your Android device** — no data sent to external servers, no cloud dependency for inference, and no per-message API costs.
+
+On top of local inference, the app features **integrated web search via DuckDuckGo**, allowing the model to pull in up-to-date information from the internet when needed — all while keeping you in control.
+
+Model parameters are **fully configurable** directly within the app, and the project supports a wide range of models in GGUF format.
+
+> **Privami AI is a fork of [EdgeLLM](https://github.com/MekkCyber/EdgeLLM)** by [MekkCyber](https://github.com/MekkCyber), a project that demonstrates how to deploy large language models on edge devices using `llama.rn`. Privami AI builds on that foundation with a focus on privacy, usability, and advanced configurability.
+
+---
+
+## ✨ Features
+
+- 🧠 **100% local inference** — your data never leaves the device
+- 🔍 **Integrated web search** — fetch real-time results via DuckDuckGo with a single tap
+- ⚙️ **Fully configurable model parameters** — temperature, top-p, top-k, repeat penalty, and more
+- 💬 **Custom system prompt** — define the model's persona and behavior to fit your needs
+- 🤖 **Multi-model support** — compatible with any GGUF-format model
+- 📱 **Built with React Native** — solid cross-platform foundation
+- 🍎 **iOS support planned** — coming in a future release
+- 🔒 **Privacy by design** — no telemetry, no data collection, no external servers for inference
+
+---
+
+## 📸 Screenshots
+
+> *(Add screenshots here)*
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) 18+
+- [React Native CLI](https://reactnative.dev/docs/environment-setup)
+- Android Studio with a configured emulator (or a physical Android device)
+
+### Installation
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/your-username/privamiai.git
+cd privamiai
+
+# 2. Install dependencies
+npm install
+
+# 3. (iOS) Install native dependencies
+cd ios && pod install && cd ..
+
+# 4. Start the Metro bundler
 npm start
 
-# OR using Yarn
-yarn start
-```
-
-## Step 2: Build and run your app
-
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
+# 5. In another terminal, run on Android
 npm run android
 
-# OR using Yarn
-yarn android
-```
-
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
+# Or on iOS (when supported)
 npm run ios
-
-# OR using Yarn
-yarn ios
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+> **Tip:** Make sure the emulator or simulator is up and running before executing the last command.
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+---
 
-## Step 3: Modify your app
+## ⚙️ Model Configuration
 
-Now that you have successfully run the app, let's make changes!
+Privami AI lets you tune the model's behavior directly from the app's settings. The available parameters include:
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+| Parameter | Description |
+|---|---|
+| `temperature` | Controls response creativity (0 = deterministic, 2 = very creative) |
+| `top_p` | Nucleus sampling — filters tokens by cumulative probability |
+| `repeat_penalty` | Penalizes repeated tokens to keep responses varied |
+| `system_prompt` | Sets the model's persona, tone, and behavioral guidelines |
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+---
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+## 🔍 Web Search with DuckDuckGo
 
-## Congratulations! :tada:
+Web search in Privami AI is an **opt-in toggle** in the chat interface. Before sending a message, you can tap the **Web Search button** to enable it for that prompt. When active, the app fetches relevant results from DuckDuckGo and injects them as context into the model — giving it access to real-time information without ever leaving the app.
 
-You've successfully run and modified your React Native App. :partying_face:
+DuckDuckGo requires **no API key** and does not track your searches.
 
-### Now what?
+Here's how the flow works once enabled:
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+1. You tap the **Web Search** button before typing your prompt
+2. You send your message
+3. The app queries DuckDuckGo and retrieves the top results
+4. Those results are passed as context to the local model
+5. The model generates a response grounded in both its own knowledge and the fetched results
 
-# Troubleshooting
+> You stay in full control — web search only runs when you explicitly toggle it on.
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+---
 
-# Learn More
+## 🤖 Supported Models
 
-To learn more about React Native, take a look at the following resources:
+- `Llama 3.2 1B` — great for low-RAM devices
+- `Qwen2.5 0.5B` — lightweight and efficient
+- `DeepSeek-R1-Distill-Qwen-1.5B`
+- `SmolLM2-1.7B`
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+> Prefer quantized versions (e.g. `Q4_K_M`, `Q6`) for best performance on mobile hardware.
+
+---
+
+## 🏗️ Tech Stack
+
+- [React Native](https://reactnative.dev/) — main framework
+- [llama.rn](https://github.com/mybigday/llama.rn) — React Native wrapper for llama.cpp
+- [llama.cpp](https://github.com/ggerganov/llama.cpp) — local inference engine
+- [DuckDuckGo Search API](https://duckduckgo.com/) — privacy-respecting web search
+
+---
+
+## 🙏 Credits
+
+This project is based on the work of **[EdgeLLM](https://github.com/MekkCyber/EdgeLLM)** by [MekkCyber](https://github.com/MekkCyber), which laid the groundwork for running LLMs on edge devices with React Native. Without that project, Privami AI wouldn't exist.
+
+---
+
+## 📄 License
+
+Distributed under the GPL 3.0 License. See [LICENSE](LICENSE) for more details.
+
+---
+
+<div align="center">
+
+Built with ❤️ and a focus on privacy.
+
+</div>
