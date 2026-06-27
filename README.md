@@ -9,6 +9,7 @@
 [![iOS](https://img.shields.io/badge/iOS-Coming%20Soon-000000?style=flat-square&logo=apple)](https://developer.apple.com/)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Based on EdgeLLM](https://img.shields.io/badge/Fork%20of-EdgeLLM-orange?style=flat-square)](https://github.com/MekkCyber/EdgeLLM)
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/U7T421CWU6)
 
 </div>
 
